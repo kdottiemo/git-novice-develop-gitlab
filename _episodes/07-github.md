@@ -30,7 +30,7 @@ world.  Log in to GitLab, then click on the "+" icon roughly in the middle, to
 create a new project (GitLab initializes at the "project" level rather than the 
 "repository" level.) Name the project, and thus the repository, `planets`:
 
-![Creating a Repository on GitHub (Step 1)](../fig/develop-fig/createNew.png)
+![Creating a Repository on GitHub (Step 1)](../fig/gitlab-fig/createNew.png)
 
 Name your repository "planets" and then click "Create Repository".
 
