@@ -65,7 +65,7 @@ which looked like this:
 
 Now that we have two repositories, we need a diagram like this:
 
-![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.svg)
+![Freshly-Made GitHub Repository](../fig/gitlab-fig/git-freshly-made-gitlab-repo.svg)
 
 Note that our local repository still contains our earlier work on `mars.txt`, but the
 remote repository on GitHub appears empty as it doesn't contain any files yet.
