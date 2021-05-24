@@ -90,13 +90,11 @@ You also have the option of using the SSH [protocol]({{ page.root }}{% link refe
 > (this one has a screencast).
 {: .callout}
 
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
-
 Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://github.com/vlad/planets.git
+$ git remote add origin https://gitlab.developprogram.org/vlad/planets.git
 ~~~
 {: .language-bash}
 
@@ -105,7 +103,7 @@ difference should be your username instead of `vlad`.
 
 `origin` is a local name used to refer to the remote repository. It could be called
 anything, but `origin` is a convention that is often used by default in git
-and GitHub, so it's helpful to stick with this unless there's a reason not to.
+and GitLab, so it's helpful to stick with this unless there's a reason not to.
 
 We can check that the command has worked by running `git remote -v`:
 
@@ -115,8 +113,8 @@ $ git remote -v
 {: .language-bash}
 
 ~~~
-origin   https://github.com/vlad/planets.git (push)
-origin   https://github.com/vlad/planets.git (fetch)
+origin   https://gitlab.developprogram.org/vlad/planets.git (push)
+origin   https://gitlab.developprogram.org/vlad/planets.git (fetch)
 ~~~
 {: .output}
 
@@ -124,7 +122,7 @@ We'll discuss remotes in more detail in the next episode, while
 talking about how they might be used for collaboration.
 
 Once the remote is set up, this command will push the changes from
-our local repository to the repository on GitHub:
+our local repository to the repository on GitLab:
 
 ~~~
 $ git push origin master
