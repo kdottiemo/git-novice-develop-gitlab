@@ -26,10 +26,11 @@ services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) o
 and cons of this in the final section of this lesson.
 
 Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
-create a new repository called `planets`:
+world.  Log in to GitLab, then click on the "+" icon roughly in the middle, to
+create a new project (GitLab initializes at the "project" level rather than the 
+"repository" level.) Name the project, and thus the repository, `planets`:
 
-![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
+![Creating a Repository on GitHub (Step 1)](../fig/develop-fig/createNew.png)
 
 Name your repository "planets" and then click "Create Repository".
 
