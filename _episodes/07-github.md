@@ -28,11 +28,11 @@ and cons of this in the final section of this lesson.
 Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitLab, then click on the "+" icon roughly in the middle, to
 create a new project (GitLab initializes at the "project" level rather than the 
-"repository" level.) Name the project, and thus the repository, `planets`:
+"repository" level.) Select "New Project":
 
 ![Creating a Repository on GitHub (Step 1)](../fig/gitlab-fig/createNew.png)
 
-Name your repository "planets" and then click "Create Repository".
+Name the project, and thus the repository, `planets`:
 
 Note: Since this repository will be connected to a local repository, it needs to be empty. Leave 
 "Initialize this repository with a README" unchecked, and keep "None" as options for both "Add 
