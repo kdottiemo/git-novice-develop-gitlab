@@ -43,14 +43,12 @@ Note: Since this repository will be connected to a local repository, it needs to
 .gitignore" and "Add a license." See the "GitHub License and README files" exercise below for a full 
 explanation of why the repository needs to be empty.
 
-![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
-
-As soon as the repository is created, GitHub displays a page with a URL and some
+As soon as the repository is created, GitLab displays a page with a URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
+![Creating a Repository on GitLab (Step 3)](../fig/gitlab-fig/initializedPlanetsProject.png)
 
-This effectively does the following on GitHub's servers:
+This effectively does the following on GitLab's servers:
 
 ~~~
 $ mkdir planets
