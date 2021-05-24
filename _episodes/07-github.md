@@ -68,16 +68,16 @@ Now that we have two repositories, we need a diagram like this:
 ![Freshly-Made GitHub Repository](../fig/gitlab-fig/git-freshly-made-gitlab-repo.svg)
 
 Note that our local repository still contains our earlier work on `mars.txt`, but the
-remote repository on GitHub appears empty as it doesn't contain any files yet.
+remote repository on GitLab appears empty as it doesn't contain any files yet.
 
 The next step is to connect the two repositories.  We do this by making the
-GitHub repository a [remote]({{ page.root}}{% link reference.md %}#remote) for the local repository.
-The home page of the repository on GitHub includes the string we need to
+GitLab repository a [remote]({{ page.root}}{% link reference.md %}#remote) for the local repository.
+The home page of the repository on GitLab includes the string we need to
 identify it:
 
-![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
+![Where to Find Repository URL on GitLab](../fig/gitlab-fig/cloneString2.png)
 
-Click on the 'HTTPS' link to change the [protocol]({{ page.root }}{% link reference.md %}#protocol) from SSH to HTTPS.
+You also have the option of using the SSH [protocol]({{ page.root }}{% link reference.md %}#protocol).
 
 > ## HTTPS vs. SSH
 >
