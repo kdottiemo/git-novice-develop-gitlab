@@ -75,26 +75,16 @@ GitLab repository a [remote]({{ page.root}}{% link reference.md %}#remote) for t
 The home page of the repository on GitLab includes the string we need to
 identify it:
 
-![Where to Find Repository URL on GitLab](../fig/gitlab-fig/cloneString2.png)
+![Where to Find Repository URL on GitLab](../fig/gitlab-fig/cloneStringSSH.png)
 
-You also have the option of using the SSH [protocol]({{ page.root }}{% link reference.md %}#protocol).
-
-> ## HTTPS vs. SSH
->
-> We use HTTPS here because it does not require additional configuration.  After
-> the workshop you may want to set up SSH access, which is a bit more secure, by
-> following one of the great tutorials from
-> [GitHub](https://help.github.com/articles/generating-ssh-keys),
-> [Atlassian/Bitbucket](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html)
-> and [GitLab](https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/)
-> (this one has a screencast).
-{: .callout}
+You also have the option of using the HTTPS [protocol]({{ page.root }}{% link reference.md %}#protocol), 
+but this may not work with DEVELOP's GitLab instance at this time.
 
 Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://gitlab.developprogram.org/vlad/planets.git
+$ git remote add origin git@gitlab.developprogram.org:vlad/planets.git
 ~~~
 {: .language-bash}
 
