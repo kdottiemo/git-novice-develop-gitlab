@@ -51,7 +51,7 @@ This line added to Wolfman's copy
 ~~~
 {: .output}
 
-and then push the change to GitHub:
+and then push the change to GitLab:
 
 ~~~
 $ git add mars.txt
@@ -85,7 +85,7 @@ To https://github.com/vlad/planets.git
 
 Now let's have the owner
 make a different change to their copy
-*without* updating from GitHub:
+*without* updating from GitLab:
 
 ~~~
 $ nano mars.txt
@@ -115,7 +115,7 @@ $ git commit -m "Add a line in my copy"
 ~~~
 {: .output}
 
-but Git won't let us push it to GitHub:
+but Git won't let us push it to GitLab:
 
 ~~~
 $ git push origin master
@@ -123,9 +123,9 @@ $ git push origin master
 {: .language-bash}
 
 ~~~
-To https://github.com/vlad/planets.git
+To git@gitlab.developprogram.org:vlad/planets.git
  ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/vlad/planets.git'
+error: failed to push some refs to 'git@gitlab.developprogram.org:vlad/planets.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
@@ -138,7 +138,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 Git rejects the push because it detects that the remote repository has new updates that have not been
 incorporated into the local branch.
-What we have to do is pull the changes from GitHub,
+What we have to do is pull the changes from GitLab,
 [merge]({{ page.root }}{% link reference.md %}#merge) them into the copy we're currently working in, and then push that.
 Let's start by pulling:
 
@@ -153,7 +153,7 @@ remote: Counting objects: 100% (5/5), done.
 remote: Compressing objects: 100% (1/1), done.
 remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From git@gitlab.developprogram.org:vlad/planets
  * branch            master     -> FETCH_HEAD
     29aba7c..dabb4c8  master     -> origin/master
 Auto-merging mars.txt
@@ -235,16 +235,16 @@ Changes to be committed:
 {: .output}
 
 ~~~
-$ git commit -m "Merge changes from GitHub"
+$ git commit -m "Merge changes from GitLab"
 ~~~
 {: .language-bash}
 
 ~~~
-[master 2abf2b1] Merge changes from GitHub
+[master 2abf2b1] Merge changes from GitLab
 ~~~
 {: .output}
 
-Now we can push our changes to GitHub:
+Now we can push our changes to GitLab:
 
 ~~~
 $ git push origin master
@@ -259,7 +259,7 @@ Compressing objects: 100% (6/6), done.
 Writing objects: 100% (6/6), 645 bytes | 645.00 KiB/s, done.
 Total 6 (delta 4), reused 0 (delta 0)
 remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
-To https://github.com/vlad/planets.git
+To git@gitlab.developprogram.org:vlad/planets.git
    dabb4c8..2abf2b1  master -> master
 ~~~
 {: .output}
@@ -279,7 +279,7 @@ remote: Counting objects: 100% (10/10), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0
 Unpacking objects: 100% (6/6), done.
-From https://github.com/vlad/planets
+From git@gitlab.developprogram.org:vlad/planets
  * branch            master     -> FETCH_HEAD
     dabb4c8..2abf2b1  master     -> origin/master
 Updating dabb4c8..2abf2b1
@@ -389,9 +389,9 @@ Conflicts can also be minimized with project management strategies:
 > > {: .language-bash}
 > >
 > > ~~~
-> > To https://github.com/vlad/planets.git
+> > To git@gitlab.developprogram.org:vlad/planets.git
 > >  ! [rejected]        master -> master (fetch first)
-> > error: failed to push some refs to 'https://github.com/vlad/planets.git'
+> > error: failed to push some refs to 'git@gitlab.developprogram.org:vlad/planets.git'
 > > hint: Updates were rejected because the remote contains work that you do
 > > hint: not have locally. This is usually caused by another repository pushing
 > > hint: to the same ref. You may want to first integrate the remote changes
@@ -416,7 +416,7 @@ Conflicts can also be minimized with project management strategies:
 > > remote: Compressing objects: 100% (3/3), done.
 > > remote: Total 3 (delta 0), reused 0 (delta 0)
 > > Unpacking objects: 100% (3/3), done.
-> > From https://github.com/vlad/planets.git
+> > From git@gitlab.developprogram.org:vlad/planets.git
 > >  * branch            master     -> FETCH_HEAD
 > >    6a67967..439dc8c  master     -> origin/master
 > > warning: Cannot merge binary files: mars.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)
