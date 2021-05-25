@@ -211,17 +211,17 @@ GitLab, though, this command would download them to our local repository.
 > ## GitLab GUI
 >
 > Browse to your `planets` repository on GitLab.
-> Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
-> Hover over, and click on, the three buttons to the right of each commit.
+> Under the Repository heading in the menu on the left, click the "Commits" heading.
+> Investigate this page.
 > What information can you gather/explore from these buttons?
 > How would you get that same information in the shell?
 >
 > > ## Solution
-> > The left-most button (with the picture of a clipboard) copies the full identifier of the commit 
+> > The middle button (with the picture of a clipboard) copies the full identifier of the commit 
 > > to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each 
 > > commit.
 > >
-> > When you click on the middle button, you'll see all of the changes that were made in that 
+> > When you click on the hyperlinked commit message, you'll see all of the changes that were made in that 
 > > particular commit. Green shaded lines indicate additions and red ones removals. In the shell we 
 > > can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and 
 > > ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences 
