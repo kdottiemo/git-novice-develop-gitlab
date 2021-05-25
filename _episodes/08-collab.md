@@ -27,7 +27,8 @@ play Owner and Collaborator.
 
 The Owner needs to give the Collaborator access. On GitLab, click the Members
 button on the left, and in the "GitLab member or Email address" field, enter your 
-partner's DEVELOP GitLab username or associated e-mail address.
+partner's DEVELOP GitLab username or associated e-mail address. Assign this 
+person the role of "Maintainer" so that they have full Push permissions.
 
 ![Adding Collaborators on GitHub](../fig/gitlab-fig/gitlabAddProjectMembers.png)
 
