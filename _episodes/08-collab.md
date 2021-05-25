@@ -25,11 +25,11 @@ play Owner and Collaborator.
 > won't need to give anyone access on GitHub, because both 'partners' are you.
 {: .callout}
 
-The Owner needs to give the Collaborator access. On GitHub, click the settings
-button on the right, select Manage access, click Invite a collaborator, and
-then enter your partner's username.
+The Owner needs to give the Collaborator access. On GitLab, click the Members
+button on the left, and in the "GitLab member or Email address" field, enter your 
+partner's DEVELOP GitLab username or associated e-mail address.
 
-![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
+![Adding Collaborators on GitHub](../fig/gitlab-fig/gitlabAddProjectMembers.png)
 
 To accept access to the Owner's repo, the Collaborator
 needs to go to [https://github.com/notifications](https://github.com/notifications).
