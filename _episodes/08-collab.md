@@ -30,7 +30,7 @@ button on the left, and in the "GitLab member or Email address" field, enter you
 partner's DEVELOP GitLab username or associated e-mail address. Assign this 
 person the role of "Maintainer" so that they have full Push permissions.
 
-![Adding Collaborators on GitHub](../fig/gitlab-fig/gitlabAddProjectMembers.png)
+![Adding Collaborators on GitLab](../fig/gitlab-fig/gitlabAddProjectMembers.png)
 
 To accept access to the Owner's repo, the Collaborator
 needs to go to [https://github.com/notifications](https://github.com/notifications).
@@ -76,7 +76,7 @@ $ git commit -m "Add notes about Pluto"
 ~~~
 {: .output}
 
-Then push the change to the *Owner's repository* on GitHub:
+Then push the change to the *Owner's repository* on GitLab:
 
 ~~~
 $ git push origin master
@@ -125,7 +125,7 @@ sensible choice earlier when we were setting up remotes by hand.)
 > remote repository at all - it just removes the link to it from the local repo.
 > * `git remote set-url [name] [newurl]` changes the URL that is associated 
 > with the remote. This is useful if it has moved, e.g. to a different GitLab
-> account, or from GitHub to a different hosting service. Or, if we made a typo when
+> account, or from GitLab to a different hosting service. Or, if we made a typo when
 > adding it!
 > * `git remote rename [oldname] [newname]` changes the local alias by which a remote 
 > is known - its name. For example, one could use this to change `upstream` to `fred`.
@@ -160,7 +160,7 @@ Fast-forward
 {: .output}
 
 Now the three repositories (Owner's local, Collaborator's local, and Owner's on
-GitHub) are back in sync.
+GitLab) are back in sync.
 
 > ## A Basic Collaborative Workflow
 >
@@ -200,7 +200,7 @@ GitHub) are back in sync.
 > {: .solution}
 {: .challenge}
 
-> ## Comment Changes in GitHub
+> ## Comment Changes in GitLab
 >
 > The Collaborator has some questions about one line change made by the Owner and
 > has some suggestions to propose.
@@ -208,7 +208,7 @@ GitHub) are back in sync.
 > With GitLab, it is possible to comment the diff of a commit. Over the line of
 > code to comment, a blue comment icon appears to open a comment window.
 >
-> The Collaborator posts its comments and suggestions using GitHub interface.
+> The Collaborator posts its comments and suggestions using GitLab interface.
 {: .challenge}
 
 > ## Version History, Backup, and Version Control
