@@ -40,7 +40,7 @@ Name the project, and thus the repository, `planets`:
 
 Note: Since this repository will be connected to a local repository, it needs to be empty. Leave 
 "Initialize this repository with a README" unchecked, and keep "None" as options for both "Add 
-.gitignore" and "Add a license." See the "GitHub License and README files" exercise below for a full 
+.gitignore" and "Add a license." See the "GitLab License and README files" exercise below for a full 
 explanation of why the repository needs to be empty.
 
 As soon as the repository is created, GitLab displays a page with a URL and some
