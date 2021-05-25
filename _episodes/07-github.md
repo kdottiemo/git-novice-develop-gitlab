@@ -179,7 +179,7 @@ To gitlab.developprogram.org:vlad/planets.git
 
 Our local and remote repositories are now in this state:
 
-![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
+![GitHub Repository After First Push](../fig/gitlab-fig/gitlab-repo-after-first-push.svg)
 
 > ## The '-u' Flag
 >
