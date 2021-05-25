@@ -22,7 +22,7 @@ play Owner and Collaborator.
 > If you're working through this lesson on your own, you can carry on by opening
 > a second terminal window.
 > This window will represent your partner, working on another computer. You
-> won't need to give anyone access on GitHub, because both 'partners' are you.
+> won't need to give anyone access on GitLab, because both 'partners' are you.
 {: .callout}
 
 The Owner needs to give the Collaborator access. On GitLab, click the Members
@@ -41,13 +41,13 @@ Next, the Collaborator needs to download a copy of the Owner's repository to her
 her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+$ git clone git@gitlab.developprogram.org:vlad/planets.git ~/Desktop/vlad-planets
 ~~~
 {: .language-bash}
 
 Replace 'vlad' with the Owner's username.
 
-![After Creating Clone of Repository](../fig/github-collaboration.svg)
+![After Creating Clone of Repository](../fig/gitlab-fig/gitlab-collaboration.svg)
 
 The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
