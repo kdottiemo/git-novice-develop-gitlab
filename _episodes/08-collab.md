@@ -28,13 +28,12 @@ play Owner and Collaborator.
 The Owner needs to give the Collaborator access. On GitLab, click the Members
 button on the left, and in the "GitLab member or Email address" field, enter your 
 partner's DEVELOP GitLab username or associated e-mail address. Assign this 
-person the role of "Maintainer" so that they have full Push permissions.
+person the role of "Maintainer" so that they have full Push/Pull permissions.
 
 ![Adding Collaborators on GitLab](../fig/gitlab-fig/gitlabAddProjectMembers.png)
 
-To accept access to the Owner's repo, the Collaborator
-needs to go to [https://github.com/notifications](https://github.com/notifications).
-Once there she can accept access to the Owner's repo.
+Once the Collaborator has been added as a Maintainer project member, the 
+Collaborator should see this new repository listed under "Your Projects."
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
  machine. This is called "cloning a repo". To clone the Owner's repo into
