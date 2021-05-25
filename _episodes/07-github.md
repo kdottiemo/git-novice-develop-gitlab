@@ -80,7 +80,7 @@ identify it:
 You also have the option of using the HTTPS [protocol]({{ page.root }}{% link reference.md %}#protocol), 
 but this may not work with DEVELOP's GitLab instance at this time.
 
-Copy that URL from the browser, go into the local `planets` repository, and run
+Copy the SSH URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
@@ -89,7 +89,7 @@ $ git remote add origin git@gitlab.developprogram.org:vlad/planets.git
 {: .language-bash}
 
 Make sure to use the URL for your repository rather than Vlad's: the only
-difference should be your username instead of `vlad`.
+difference should be your username, "firstname.lastname," instead of `vlad`.
 
 `origin` is a local name used to refer to the remote repository. It could be called
 anything, but `origin` is a convention that is often used by default in git
@@ -103,8 +103,8 @@ $ git remote -v
 {: .language-bash}
 
 ~~~
-origin   https://gitlab.developprogram.org/vlad/planets.git (push)
-origin   https://gitlab.developprogram.org/vlad/planets.git (fetch)
+origin   git@gitlab.developprogram.org:vlad/planets.git (push)
+origin   git@gitlab.developprogram.org:vlad/planets.git (fetch)
 ~~~
 {: .output}
 
@@ -127,12 +127,12 @@ Compressing objects: 100% (11/11), done.
 Writing objects: 100% (16/16), 1.45 KiB | 372.00 KiB/s, done.
 Total 16 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), done.
-To https://github.com/vlad/planets.git
+To gitlab.developprogram.org:vlad/planets.git
  * [new branch]      master -> master
 ~~~
 {: .output}
 
-> ## Proxy
+> ## Proxy (for HTTPS Usage)
 >
 > If the network you are connected to uses a proxy, there is a chance that your
 > last command failed with "Could not resolve hostname" as the error message. To
