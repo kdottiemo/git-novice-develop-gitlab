@@ -90,7 +90,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 306 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
+To git@gitlab.developprogram.org:vlad/planets.git
    9272da5..29aba7c  master -> master
 ~~~
 {: .output}
@@ -105,7 +105,7 @@ sensible choice earlier when we were setting up remotes by hand.)
 > a single "remote", called `origin`. A remote is a copy of the repository
 > that is hosted somewhere else, that we can push to and pull from, and 
 > there's no reason that you have to work with only one. For example, 
-> on some large projects you might have your own copy in your own GitHub
+> on some large projects you might have your own copy in your own GitLab
 > account (you'd probably call this `origin`) and also the main "upstream"
 > project repository (let's call this `upstream` for the sake of examples).
 > You would pull from `upstream` from time to 
@@ -124,18 +124,18 @@ sensible choice earlier when we were setting up remotes by hand.)
 > * `git remote remove [name]` removes a remote. Note that it doesn't affect the 
 > remote repository at all - it just removes the link to it from the local repo.
 > * `git remote set-url [name] [newurl]` changes the URL that is associated 
-> with the remote. This is useful if it has moved, e.g. to a different GitHub
+> with the remote. This is useful if it has moved, e.g. to a different GitLab
 > account, or from GitHub to a different hosting service. Or, if we made a typo when
 > adding it!
 > * `git remote rename [oldname] [newname]` changes the local alias by which a remote 
 > is known - its name. For example, one could use this to change `upstream` to `fred`.
 {: .callout}
 
-Take a look to the Owner's repository on its GitHub website now (maybe you need
+Take a look to the Owner's repository on its GitLab website now (maybe you need
 to refresh your browser.) You should be able to see the new commit made by the
 Collaborator.
 
-To download the Collaborator's changes from GitHub, the Owner now enters:
+To download the Collaborator's changes from GitLab, the Owner now enters:
 
 ~~~
 $ git pull origin master
@@ -148,7 +148,7 @@ remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From git@gitlab.developprogram.org:vlad/planets
  * branch            master     -> FETCH_HEAD
    9272da5..29aba7c  master     -> origin/master
 Updating 9272da5..29aba7c
@@ -171,7 +171,7 @@ GitHub) are back in sync.
 > * update your local repo with `git pull origin master`,
 > * make your changes and stage them with `git add`,
 > * commit your changes with `git commit -m`, and
-> * upload the changes to GitHub with `git push origin master`
+> * upload the changes to GitLab with `git push origin master`
 >
 > It is better to make many commits with smaller changes rather than
 > of one commit with massive changes: small commits are easier to
@@ -187,7 +187,7 @@ GitHub) are back in sync.
 >
 > The Owner pushed commits to the repository without giving any information
 > to the Collaborator. How can the Collaborator find out what has changed with
-> command line? And on GitHub?
+> command line? And on GitLab?
 >
 > > ## Solution
 > > On the command line, the Collaborator can use ```git fetch origin master```
@@ -195,7 +195,7 @@ GitHub) are back in sync.
 > > them. Then by running ```git diff master origin/master``` the Collaborator
 > > will see the changes output in the terminal.
 > >
-> > On GitHub, the Collaborator can go to the repository and click on 
+> > On GitLab, the Collaborator can go to the repository and click on 
 > > "commits" to view the most recent commits pushed to the repository.
 > {: .solution}
 {: .challenge}
@@ -205,7 +205,7 @@ GitHub) are back in sync.
 > The Collaborator has some questions about one line change made by the Owner and
 > has some suggestions to propose.
 >
-> With GitHub, it is possible to comment the diff of a commit. Over the line of
+> With GitLab, it is possible to comment the diff of a commit. Over the line of
 > code to comment, a blue comment icon appears to open a comment window.
 >
 > The Collaborator posts its comments and suggestions using GitHub interface.
@@ -215,5 +215,5 @@ GitHub) are back in sync.
 >
 > Some backup software can keep a history of the versions of your files. They also
 > allows you to recover specific versions. How is this functionality different from version control?
-> What are some of the benefits of using version control, Git and GitHub?
+> What are some of the benefits of using version control, Git and GitLab?
 {: .challenge}
