@@ -198,7 +198,7 @@ $ git pull origin master
 {: .language-bash}
 
 ~~~
-From https://github.com/vlad/planets
+From gitlab.developprogram.org:vlad/planets
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
@@ -206,11 +206,11 @@ Already up-to-date.
 
 Pulling has no effect in this case because the two repositories are already
 synchronized.  If someone else had pushed some changes to the repository on
-GitHub, though, this command would download them to our local repository.
+GitLab, though, this command would download them to our local repository.
 
-> ## GitHub GUI
+> ## GitLab GUI
 >
-> Browse to your `planets` repository on GitHub.
+> Browse to your `planets` repository on GitLab.
 > Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
 > Hover over, and click on, the three buttons to the right of each commit.
 > What information can you gather/explore from these buttons?
@@ -235,25 +235,25 @@ GitHub, though, this command would download them to our local repository.
 > {: .solution}
 {: .challenge}
 
-> ## Uploading files directly in GitHub browser
+> ## Uploading files directly in GitLab browser
 >
-> Github also allows you to skip the command line and upload files directly to 
+> GitLab also allows you to skip the command line and upload files directly to 
 > your repository without having to leave the browser. There are two options. 
 > First you can click the "Upload files" button in the toolbar at the top of the
 > file tree. Or, you can drag and drop files from your desktop onto the file 
-> tree. You can read more about this [on this GitHub page](https://help.github.com/articles/adding-a-file-to-a-repository/)
+> tree. You can read more about this [on this GitLab page](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file)
 {: .callout}
 
-> ## GitHub Timestamp
+> ## GitLab Timestamp
 >
-> Create a remote repository on GitHub. Push the contents of your local
+> Create a remote repository on GitLab. Push the contents of your local
 > repository to the remote. Make changes to your local repository and push these
-> changes. Go to the repo you just created on GitHub and check the
-> [timestamps]({{ page.root }}{% link reference.md %}#timestamp) of the files. How does GitHub
+> changes. Go to the repo you just created on GitLab and check the
+> [timestamps]({{ page.root }}{% link reference.md %}#timestamp) of the files. How does GitLab
 > record times, and why?
 >
 > > ## Solution
-> > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three 
+> > GitLab displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three 
 > > weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the 
 > > last change to the file occurred.
 > {: .solution}
@@ -271,14 +271,14 @@ GitHub, though, this command would download them to our local repository.
 > {: .solution}
 {: .challenge}
 
-> ## GitHub License and README files
+> ## GitLab License and README files
 >
-> In this section we learned about creating a remote repository on GitHub, but when you initialized 
-> your GitHub repo, you didn't add a README.md or a license file. If you had, what do you think 
+> In this section we learned about creating a remote repository on GitLab, but when you initialized 
+> your GitLab repo, you didn't add a README.md or a license file. If you had, what do you think 
 > would have happened when you tried to link your local and remote repositories?
 >
 > > ## Solution
-> > In this case, we'd see a merge conflict due to unrelated histories. When GitHub creates a 
+> > In this case, we'd see a merge conflict due to unrelated histories. When GitLab creates a 
 > > README.md file, it performs a commit in the remote repository. When you try to pull the remote 
 > > repository to your local repository, Git detects that they have histories that do not share a 
 > > common origin and refuses to merge.
@@ -293,7 +293,7 @@ GitHub, though, this command would download them to our local repository.
 > > remote: Counting objects: 100% (3/3), done.
 > > remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 > > Unpacking objects: 100% (3/3), done.
-> > From https://github.com/vlad/planets
+> > From git@gitlab.developprogram.org:vlad/planets
 > >  * branch            master     -> FETCH_HEAD
 > >  * [new branch]      master     -> origin/master
 > > fatal: refusing to merge unrelated histories
@@ -309,7 +309,7 @@ GitHub, though, this command would download them to our local repository.
 > > {: .language-bash}
 > >
 > > ~~~
-> > From https://github.com/vlad/planets
+> > From git@gitlab.developprogram.org:vlad/planets
 > >  * branch            master     -> FETCH_HEAD
 > > Merge made by the 'recursive' strategy.
 > > README.md | 1 +
