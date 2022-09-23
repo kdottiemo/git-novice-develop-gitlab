@@ -9,7 +9,7 @@ objectives:
 - "Push to or pull from a remote repository."
 keypoints:
 - "A local Git repository can be connected to one or more remote repositories."
-- "Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH."
+- "Use the SSH protocol to connect to remote repositories."
 - "`git push` copies changes from a local repository to a remote repository."
 - "`git pull` copies changes from a remote repository to a local repository."
 ---
@@ -22,9 +22,10 @@ Systems like Git allow us to move work between any two repositories.  In
 practice, though, it's easiest to use one copy as a central hub, and to keep it
 on the web rather than on someone's laptop.  Most programmers use hosting
 services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) or
-[GitLab](https://gitlab.com/) to hold those master copies; we'll explore the pros
-and cons of this in the final section of this lesson.
+[GitLab](https://gitlab.com/) to hold those main copies; we'll explore the pros
+and cons of this in a later episode.
 
+## 1. Create a remote repository
 Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitLab, then click on the "+" icon roughly in the middle, to
 create a new project (GitLab initializes at the "project" level rather than the 
@@ -57,7 +58,7 @@ $ git init
 ~~~
 {: .language-bash}
 
-If you remember back to the earlier [lesson](../04-changes/) where we added and
+If you remember back to the earlier [episode](../04-changes/) where we added and
 committed our earlier work on `mars.txt`, we had a diagram of the local repository
 which looked like this:
 
@@ -70,9 +71,9 @@ Now that we have two repositories, we need a diagram like this:
 Note that our local repository still contains our earlier work on `mars.txt`, but the
 remote repository on GitLab appears empty as it doesn't contain any files yet.
 
+## 2. Connect local to remote repository
 The next step is to connect the two repositories.  We do this by making the
-GitLab repository a [remote]({{ page.root}}{% link reference.md %}#remote) for the local repository.
-The home page of the repository on GitLab includes the string we need to
+GitLab repository a [remote]({{ page.root}}{% link reference.md %}#remote) for the local repository. The home page of the repository on GitLab includes the string we need to
 identify it:
 
 ![Where to Find Repository URL on GitLab](../fig/gitlab-fig/cloneStringSSH.png)
@@ -115,9 +116,12 @@ Once the remote is set up, this command will push the changes from
 our local repository to the repository on GitLab:
 
 ~~~
-$ git push origin master
+$ git push origin main
 ~~~
 {: .language-bash}
+
+Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
+will not prompt for a passphrase. 
 
 ~~~
 Enumerating objects: 16, done.
@@ -128,7 +132,7 @@ Writing objects: 100% (16/16), 1.45 KiB | 372.00 KiB/s, done.
 Total 16 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), done.
 To gitlab.developprogram.org:vlad/planets.git
- * [new branch]      master -> master
+ * [new branch]      main -> main
 ~~~
 {: .output}
 
@@ -140,7 +144,7 @@ To gitlab.developprogram.org:vlad/planets.git
 >
 > ~~~
 > $ git config --global http.proxy http://user:password@proxy.url
-> $ git config --global https.proxy http://user:password@proxy.url
+> $ git config --global https.proxy https://user:password@proxy.url
 > ~~~
 > {: .language-bash}
 >
@@ -187,19 +191,19 @@ Our local and remote repositories are now in this state:
 > option is synonymous with the `--set-upstream-to` option for the `git branch`
 > command, and is used to associate the current branch with a remote branch so
 > that the `git pull` command can be used without any arguments. To do this,
-> simply use `git push -u origin master` once the remote has been set up.
+> simply use `git push -u origin main` once the remote has been set up.
 {: .callout}
 
 We can pull changes from the remote repository to the local one as well:
 
 ~~~
-$ git pull origin master
+$ git pull origin main
 ~~~
 {: .language-bash}
 
 ~~~
 From gitlab.developprogram.org:vlad/planets
- * branch            master     -> FETCH_HEAD
+ * branch            main     -> FETCH_HEAD
 Already up-to-date.
 ~~~
 {: .output}
@@ -261,7 +265,7 @@ GitLab, though, this command would download them to our local repository.
 
 > ## Push vs. Commit
 >
-> In this lesson, we introduced the "git push" command.
+> In this episode, we introduced the "git push" command.
 > How is "git push" different from "git commit"?
 >
 > > ## Solution
@@ -283,7 +287,7 @@ GitLab, though, this command would download them to our local repository.
 > > repository to your local repository, Git detects that they have histories that do not share a 
 > > common origin and refuses to merge.
 > > ~~~
-> > $ git pull origin master
+> > $ git pull origin main
 > > ~~~
 > > {: .language-bash}
 > >
@@ -294,8 +298,8 @@ GitLab, though, this command would download them to our local repository.
 > > remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 > > Unpacking objects: 100% (3/3), done.
 > > From git@gitlab.developprogram.org:vlad/planets
-> >  * branch            master     -> FETCH_HEAD
-> >  * [new branch]      master     -> origin/master
+> >  * branch            main     -> FETCH_HEAD
+> >  * [new branch]      main     -> origin/main
 > > fatal: refusing to merge unrelated histories
 > > ~~~
 > > {: .output}
@@ -304,13 +308,13 @@ GitLab, though, this command would download them to our local repository.
 > > Be careful when you use this option and carefully examine the contents of local and remote 
 > > repositories before merging.
 > > ~~~
-> > $ git pull --allow-unrelated-histories origin master
+> > $ git pull --allow-unrelated-histories origin main
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
 > > From git@gitlab.developprogram.org:vlad/planets
-> >  * branch            master     -> FETCH_HEAD
+> >  * branch            main     -> FETCH_HEAD
 > > Merge made by the 'recursive' strategy.
 > > README.md | 1 +
 > > 1 file changed, 1 insertion(+)

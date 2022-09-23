@@ -38,8 +38,13 @@ Collaborator should also get an e-mail regarding this action, sent to the e-mail
 address linked to GitLab.
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
- machine. This is called "cloning a repo". To clone the Owner's repo into
-her `Desktop` folder, the Collaborator enters:
+machine. This is called "cloning a repo". 
+
+The Collaborator doesn't want to overwrite her own version of `planets.git`, so 
+needs to clone the Owner's repository to a different location than her own 
+repository with the same name.
+ 
+To clone the Owner's repo into her `Desktop` folder, the Collaborator enters:
 
 ~~~
 $ git clone git@gitlab.developprogram.org:vlad/planets.git ~/Desktop/vlad-planets
@@ -80,7 +85,7 @@ $ git commit -m "Add notes about Pluto"
 Then push the change to the *Owner's repository* on GitLab:
 
 ~~~
-$ git push origin master
+$ git push origin main
 ~~~
 {: .language-bash}
 
@@ -99,6 +104,10 @@ To git@gitlab.developprogram.org:vlad/planets.git
 Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
 sensible choice earlier when we were setting up remotes by hand.)
+
+Take a look at the Owner’s repository on GitHub again, and you should be 
+able to see the new commit made by the Collaborator. You may need to refresh
+your browser to see the new commit.
 
 > ## Some more about remotes
 >
@@ -139,7 +148,7 @@ Collaborator.
 To download the Collaborator's changes from GitLab, the Owner now enters:
 
 ~~~
-$ git pull origin master
+$ git pull origin main
 ~~~
 {: .language-bash}
 
@@ -150,8 +159,8 @@ remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From git@gitlab.developprogram.org:vlad/planets
- * branch            master     -> FETCH_HEAD
-   9272da5..29aba7c  master     -> origin/master
+ * branch            main     -> FETCH_HEAD
+   9272da5..29aba7c  main     -> origin/main
 Updating 9272da5..29aba7c
 Fast-forward
  pluto.txt | 1 +
@@ -169,10 +178,10 @@ GitLab) are back in sync.
 > repository you are collaborating on, so you should `git pull` before making
 > our changes. The basic collaborative workflow would be:
 >
-> * update your local repo with `git pull origin master`,
+> * update your local repo with `git pull origin main`,
 > * make your changes and stage them with `git add`,
 > * commit your changes with `git commit -m`, and
-> * upload the changes to GitLab with `git push origin master`
+> * upload the changes to GitLab with `git push origin main`
 >
 > It is better to make many commits with smaller changes rather than
 > of one commit with massive changes: small commits are easier to
@@ -191,9 +200,9 @@ GitLab) are back in sync.
 > command line? And on GitLab?
 >
 > > ## Solution
-> > On the command line, the Collaborator can use ```git fetch origin master```
+> > On the command line, the Collaborator can use ```git fetch origin main```
 > > to get the remote changes into the local repository, but without merging
-> > them. Then by running ```git diff master origin/master``` the Collaborator
+> > them. Then by running ```git diff main origin/main``` the Collaborator
 > > will see the changes output in the terminal.
 > >
 > > On GitLab, the Collaborator can go to the repository and click on 
